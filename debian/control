@@ -1,0 +1,24 @@
+Source: libhfi1
+Priority: optional
+Maintainer: Ana Guerrero <ana-externe.guerrero@edf.fr>
+Build-Depends: debhelper (>=9), automake, autotools-dev, libtool, libibverbs-dev
+Standards-Version: 3.9.8
+Section: libs
+Homepage: https://github.com/01org/opa-libhfi1verbs
+
+Package: libhfi1-dev
+Section: libdevel
+Architecture: any
+Depends: libhfi1 (= ${binary:Version}), ${misc:Depends}
+Description: Intel Omni-Path HFI Userspace Driver
+ libhfi1 provides a device-specific userspace driver for Intel Host
+ Fabric interface cards. This driver is designed for use with the
+ libibverbs library.
+
+Package: libhfi1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Intel Omni-Path HFI Userspace Driver
+ libhfi1 provides a device-specific userspace driver for Intel Host
+ Fabric interface cards. This driver is designed for use with the
+ libibverbs library.
